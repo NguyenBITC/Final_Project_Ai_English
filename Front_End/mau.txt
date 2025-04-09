@@ -1,0 +1,158 @@
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+import { GoogleGenerativeAI } from "@google/generative-ai"; 
+const GrammarPractice = () => {
+  const [questions, setQuestions] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
+  const [res, setRes] = useState('')
+  const [subPrompt, setSubPrompt] = useState('')
+  useEffect(() => {
+    const getData = async () => {
+      try {
+        // const { GoogleGenerativeAI } = await import("@google/generative-ai");
+
+        const genAI = new GoogleGenerativeAI("AIzaSyDd7KrRUvSafwJkh5j1d40OubayQTeJSZM");
+        const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+
+        const prompt = `Please create a set of questions (incomplete sentences) related to the ${subPrompt} tense, consisting of 5 questions. Each question should include the following:
+
+The question itself.
+4 answer options (A, B, C, D).
+Specify the correct answer (A, B, C, or D).
+Provide a brief explanation of why the correct answer is correct and why the other options are incorrect.
+Return the result in JSON format with the following structure:
+
+[
+  {
+    "id": "id1",
+    "question": "Question 1",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_answer": "Correct answer (A, B, C, or D)",
+    "explanation": "Explanation for why the correct answer is correct and why the other options are incorrect."
+  },
+  {
+    "id": "id2",
+    "question": "Question 2",
+    "options": {
+      "A": "Option A",
+      "B": "Option B",
+      "C": "Option C",
+      "D": "Option D"
+    },
+    "correct_answer": "Correct answer (A, B, C, or D)",
+    "explanation": "Explanation for why the correct answer is correct and why the other options are incorrect."
+  }
+]
+Please ensure that the explanations clearly clarify the reasoning behind the correct and incorrect options, especially in relation to the use of the present simple tense.`;
+        const rawResult = (await model.generateContent(prompt)).response.text();
+        const perfectResult = rawResult.substring(7, rawResult.length-4)
+        console.log(perfectResult)
+      } catch (error) {}
+    };
+    getData();
+  },[subPrompt]);
+  // const result = await model.generateContent(prompt);
+  // console.log(result.response.text());
+
+  // const fetchQuestions = async (grammarRule) => {
+  //   setLoading(true);
+  //   setError(null);
+
+  //   try {
+  //     // Gọi API với API key
+  //     const response = await axios.post(
+  //       `${API_URL}?key=${API_KEY}`, // Gắn API key vào URL
+  //       {
+  //         grammarRule: grammarRule, // Ngữ pháp cần tạo câu hỏi
+  //         numQuestions: 5, // Số lượng câu hỏi cần tạo
+  //       }
+  //     );
+
+  //     setQuestions(response.data.questions || []);
+  //   } catch (err) {
+  //     console.error(err);
+  //     setError("Không thể tải câu hỏi. Vui lòng thử lại.");
+  //   } finally {
+  //     setLoading(false);
+  //   }
+  // };
+
+  const handleGrammarSelection = (grammarRule) => {
+    // fetchQuestions(grammarRule);
+  };
+
+  return (
+    <div className="min-h-screen bg-gray-50 p-6">
+      <h1 className="text-3xl font-bold text-center text-gray-800 mb-8">
+        Bài Tập Ngữ Pháp
+      </h1>
+
+      <div className="mb-6">
+        <h2 className="text-lg font-bold mb-4">Chọn loại ngữ pháp:</h2>
+        <div className="flex gap-4">
+          <button
+            onClick={() => {
+              handleGrammarSelection("Present Simple")
+              setSubPrompt('Present Simple')
+            }}
+            className="bg-green-500 text-white py-2 px-4 rounded hover:bg-green-600"
+          >
+            Hiện tại đơn
+          </button>
+          <button
+            onClick={() => {
+              handleGrammarSelection("Past Simple")
+              setSubPrompt('Past Simple')
+            }}
+            className="bg-green-500 text-white py-2 px-4 rounded hover:bg-green-600"
+          >
+            Quá khứ đơn
+          </button>
+          <button
+            onClick={() => {
+              handleGrammarSelection("Future Simple")
+              setSubPrompt('Future Simple')
+            }}
+            className="bg-green-500 text-white py-2 px-4 rounded hover:bg-green-600"
+          >
+            Tương lai đơn
+          </button>
+        </div>
+      </div>
+
+      {loading && (
+        <p className="text-center text-gray-600">Đang tải câu hỏi...</p>
+      )}
+      {error && <p className="text-center text-red-600">{error}</p>}
+
+      {questions.length > 0 && (
+        <div className="bg-white p-6 rounded-lg shadow-lg max-w-2xl mx-auto">
+          {questions.map((question, index) => (
+            <div key={index} className="mb-6">
+              <h2 className="text-lg font-bold mb-4">Câu hỏi {index + 1}</h2>
+              <p className="text-gray-600 mb-4">{question.text}</p>
+              <div className="flex flex-col gap-4">
+                {question.options.map((option, idx) => (
+                  <button
+                    key={idx}
+                    className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600"
+                  >
+                    {option}
+                  </button>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default GrammarPractice;

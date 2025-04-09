@@ -1,0 +1,28 @@
+{
+  "lessons": [
+    {
+      "title": "Personal Pronouns (Đại từ nhân xưng)",
+      "content": "Giải thích:\nĐại từ nhân xưng dùng để thay thế cho danh từ chỉ người hoặc vật, giúp tránh lặp lại trong câu.\n\nI (tôi)\n\nYou (bạn, bạn, các bạn)\n\nHe (anh ấy)\n\nShe (cô ấy)\n\nIt (nó, chỉ vật hoặc động vật không xác định giới tính)\n\nWe (chúng tôi)\n\nThey (họ)\n\nVí dụ:\n\nI am a student. (Tôi là học sinh.)\n\nHe is my brother. (Anh ấy là anh trai của tôi.)\n\nThey are my friends. (Họ là bạn của tôi.)\n\nLưu ý:\n\"You\" dùng cho cả số ít và số nhiều.\n\n\"It\" dùng cho vật, động vật không xác định giới tính, hoặc khi nói về thời tiết."
+    },
+    {
+      "title": "Basic Sentence Structures (Cấu trúc câu cơ bản)",
+      "content": "Giải thích:\nCấu trúc câu cơ bản trong tiếng Anh thường bao gồm các thành phần chính sau:\n\nS (Subject): Chủ ngữ\n\nV (Verb): Động từ\n\nO (Object): Tân ngữ (nếu có)\n\nCấu trúc câu đơn giản:\n\nS + V + O: Chủ ngữ + Động từ + Tân ngữ\n\nVí dụ:\n\nI read a book. (Tôi đọc một cuốn sách.)\n\nShe eats lunch. (Cô ấy ăn trưa.)\n\nCâu phủ định: Thêm do/does + not sau chủ ngữ.\n\nVí dụ:\n\nI do not like coffee. (Tôi không thích cà phê.)\n\nThey do not play football. (Họ không chơi bóng đá.)\n\nCâu hỏi: Đảo do/does lên trước chủ ngữ.\n\nVí dụ:\n\nDo you like ice cream? (Bạn có thích kem không?)\n\nDoes he go to school? (Anh ấy có đi học không?)"
+    },
+    {
+      "title": "Singular & Plural Forms (Danh từ số ít và số nhiều)",
+      "content": "Giải thích:\nSố ít (Singular): Chỉ một người, vật, hoặc sự việc.\n\nVí dụ: a cat (một con mèo), a book (một cuốn sách)\n\nSố nhiều (Plural): Chỉ nhiều người, vật hoặc sự việc. Danh từ số nhiều thường được tạo bằng cách thêm -s hoặc -es vào cuối danh từ số ít.\n\nQuy tắc:\n\nNếu danh từ kết thúc bằng s, x, ch, sh, ta thêm -es.\n\nNếu danh từ kết thúc bằng các chữ cái khác, chỉ cần thêm -s.\n\nVí dụ:\n\ncats (những con mèo)\n\nbooks (những cuốn sách)\n\nboxes (những chiếc hộp)\n\nchurches (những nhà thờ)\n\nLưu ý:\nCác danh từ không đếm được (water, money, rice, etc.) không có dạng số nhiều."
+    },
+    {
+      "title": "Present Simple Tense (Thì hiện tại đơn)",
+      "content": "Giải thích:\nThì hiện tại đơn dùng để diễn tả hành động lặp đi lặp lại, thói quen hoặc sự thật hiển nhiên.\n\nCấu trúc câu khẳng định:\n\nS + V (s/es): Chủ ngữ + động từ nguyên thể (hoặc thêm -s/ -es cho he, she, it)\n\nVí dụ:\n\nI work every day. (Tôi làm việc mỗi ngày.)\n\nShe reads books. (Cô ấy đọc sách.)\n\nCấu trúc câu phủ định: Thêm do/does not + động từ nguyên thể.\n\nVí dụ:\n\nI do not like coffee. (Tôi không thích cà phê.)\n\nHe does not play football. (Anh ấy không chơi bóng đá.)\n\nCấu trúc câu hỏi: Đảo do/does lên trước chủ ngữ.\n\nVí dụ:\n\nDo you like music? (Bạn có thích âm nhạc không?)\n\nDoes she speak English? (Cô ấy có nói tiếng Anh không?)"
+    },
+    {
+      "title": "Imperative Sentences (Câu mệnh lệnh)",
+      "content": "Giải thích:\nCâu mệnh lệnh được dùng để yêu cầu hoặc ra lệnh một hành động. Chủ ngữ thường bị lược bỏ vì người nghe là người thực hiện hành động.\n\nCấu trúc: Động từ + (tân ngữ)\n\nVí dụ:\n\nSit down! (Ngồi xuống!)\n\nOpen the door! (Mở cửa ra!)\n\nCâu mệnh lệnh phủ định: Dùng do not hoặc don’t trước động từ.\n\nVí dụ:\n\nDo not speak loudly! (Đừng nói to!)\n\nDon't touch that! (Đừng chạm vào cái đó!)"
+    },
+    {
+      "title": "Prepositions of Place (Giới từ chỉ nơi chốn)",
+      "content": "Giải thích:\nGiới từ chỉ nơi chốn dùng để chỉ vị trí của vật thể trong không gian. Dưới đây là các giới từ thường gặp:\n\nIn (trong): Dùng để chỉ một vật thể ở trong một không gian kín.\n\nVí dụ: The book is in the bag. (Cuốn sách trong túi.)\n\nOn (trên): Dùng để chỉ vật thể ở trên một bề mặt.\n\nVí dụ: The pen is on the table. (Cái bút trên bàn.)\n\nUnder (dưới): Dùng để chỉ vật thể ở dưới một vật khác.\n\nVí dụ: The shoes are under the bed. (Đôi giày dưới giường.)\n\nNext to (bên cạnh): Dùng để chỉ một vật thể nằm bên cạnh một vật thể khác.\n\nVí dụ: The chair is next to the table. (Cái ghế bên cạnh cái bàn.)"
+    }
+  ]
+}
